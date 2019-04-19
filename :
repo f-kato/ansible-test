@@ -1,0 +1,13 @@
+# OS
+FROM 3.7.3-alpine3.9
+
+RUN apk --update add --no-cache \
+    openssh
+
+WORKDIR /home
+
+# Ansible Install
+RUN git clone https://github.com/ansible/ansible.git
+
+WORKDIR /home/
+
