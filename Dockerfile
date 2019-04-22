@@ -21,3 +21,8 @@ RUN source hacking/env-setup
 
 RUN pip3 install -r test/runner/requirements/units.txt
 
+COPY ./entrypoint.sh /usr/local/bin/
+RUN chmod +x /usr/local/bin/entrypoint.sh
+
+ENTRYPOINT [ "entrypoint.sh" ]
+
