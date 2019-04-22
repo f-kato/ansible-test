@@ -5,6 +5,7 @@ services:
     image: fkato/ansible-test:latest
     volumes:
       - ~/Code/ansible/my_modules:/home/my_modules/
+    tty: true
 
 
 
